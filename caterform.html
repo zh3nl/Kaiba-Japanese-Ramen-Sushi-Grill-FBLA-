@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaliba Japanese Ramen, Sushi & Grill</title>
+        <link rel="icon" href="seahorse png.png">
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!--css link for mainpage-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img class="restaurant-logo" src="seahorse png.png">Kaiba <label id="restaurant-logo2">Japanese Ramen, Sushi & Grill</label></a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="menupage.html">Menu</a>
+                <a class="active" href="communitypage.html">Community</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+        </header>
+        <form action="" id="search-form">
+            <input type="search" placeholder="Search Here..." name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        <section>
+            <div class="fundraiser">
+            <h1 class="fund-desc">Catering Registration Form</h1>
+            <p class="fund-desc">Please fill out this form with the required information</p>
+            <form class="fund-req" action="https://formsubmit.co/zhenliu200677@gmail.com" method="POST" target="_blank">
+                <fieldset name="fieldset">
+                    <label name ="label" class="fund-label" for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required/></label>
+                    <label name ="label" class="fund-label" for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required/></label>
+                    <label name ="label" class="fund-label" for="org-name">Enter Your Organization's Name: <input id="org-name" name="org-name" type="text" required/></label>
+                    <label name ="label" class="fund-label" for="email">Enter Your Email: <input id="email" name="email" type="email" required/></label>
+                    <label name ="label" class="fund-label" for="phone-number">Enter Your Phone Number: <input id="phone-number" name="phone-number" type="tel" required/></label>
+                </fieldset>
+                <fieldset name="fieldset">
+                    <label name ="label" class="fund-label" for="date">Please Choose a Desired Date: <input id="date" name="date" type="date" required/></label>
+                    <label name ="label" class="fund-label" for="cater-size">What is Your Party Size? (Minimum 10): <input id="cater-size" type="number" name="cater-size" min="10" max="9999"/></label>
+                    <label name ="label" class="fund-label" for="activity-type">What Type of Catering Would You Like to Host?
+                        <select id="activity-type" name="activity-type">
+                        <option value="">(Select One)</option>
+                        <option value="1">Cater Bus</option>
+                        <option value="2">Takeout Catering</option>
+                        </select>
+                    </label>
+                    <label name ="label" class="fund-label" for="activity">Please Specify Any Allergies or Special Request: <textarea id="activity" name="activity" rows="5" cols="30" placeholder="Type Here"></textarea></textarea></label>
+                </fieldset>
+                <button class="btn-form" type="submit">Submit</button>
+            </form>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Locations:</h3>
+                    <a href="about.html">Anaheim</a>
+                    <a href="about.html">Monterey</a>
+                    <a href="about.html">Pasadena</a>
+                </div>
+                <div class="box">
+                    <h3>Community</h3>
+                    <a href="communitypage.html">Fundraising</a>
+                    <a href="communitypage.html">Catering</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="box">
+                    <h3>Find Us On:</h3>
+                    <a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" target="_blank">Doordash</a>
+                    <a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" target="_blank">Grubhub</a>
+                    <a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" target="_blank">Uber Eats</a>
+                    <a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" target="_blank">Yelp</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 <span>Kaiba Japanese Ramen, Sushi, & Grill. All Rights Reserved. </span>
+            </div>
+        </section>
+        <div class="loader-container">
+            <img src="loader.gif" alt="">
+        </div>
+        <script src="script3.js"></script>
+    </body>
+</html>
