@@ -9,6 +9,28 @@ Team Members:
   - Ryan Kim: Digital Resource Manager and Visual Editor. 
   - Zhen Liu: Frontend and Backend Developer. 
 #### This website is created through VSCode with HTML, CSS, and Javascript.
+
+## Project Functionality
+### Home Page
+The sliding animation present on the home page is created through the use of Slider.js.
+It was first used to present the featured dishes that can be changed by the admin. 
+#### First implementation was within the script.js file (which is attached to the home page html file: 
+``` javascript
+  var swiper = new Swiper(".home-slider", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop:true, 
+  });
+ ```
+
 ## Citations and Documentation
 Tools/APIs Used (With link to document provided): 
   - Swiper.js: https://swiperjs.com/swiper-api#swiper-full-html-layout 
