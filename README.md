@@ -8,7 +8,8 @@ Team Members:
   - Yan Bao: Frontend Developer and Timekeeper. 
   - Ryan Kim: Digital Resource Manager and Visual Editor. 
   - Zhen Liu: Frontend and Backend Developer. 
-#### This website is created through VSCode with HTML, CSS, and Javascript. 
+#### This website is created through VSCode with HTML, CSS, and Javascript.
+## Citations and Documentation
 Tools/APIs Used (With link to document provided): 
   - Swiper.js: https://swiperjs.com/swiper-api#swiper-full-html-layout 
   - MailChimp Mailing Service (free account is used): https://mailchimp.com/legal/
