@@ -9,7 +9,7 @@ Team Members:
   - Ryan Kim: Digital Resource Manager and Visual Editor. 
   - Zhen Liu: Frontend and Backend Developer. 
 #### This website is created through VSCode with HTML, CSS, and Javascript.
-
+***
 ## Project Functionality
 ### Home Page
 The sliding animation present on the home page is created through the use of Slider.js.
@@ -138,6 +138,7 @@ Implementation:
             <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
             <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';fnames[6]='MMERGE6';ftypes[6]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 ```
+***
 ### Menu Page
 Within the menu page, users can add, increase/decrease, and delete items to/from their shopping carts. This serves as the method of purchase/call to action for this website and is created with HTML and Javascript (Note: Payment information is not integrated as of now). 
 #### Shopping Cart 
@@ -303,9 +304,102 @@ function updateTotal() {
 
 }
 ```
+***
 ### Fundraiser, Catering, and Contact Forms (Community Page and Contact Page)
 This section allows the users to request for fundraising, catering, or general inquiries through the use of a submission form. The submitted information is then transferred to our email through the FormSubmit backend tool. Following this, our admins can then review the submitted information and communicate with the customers through their preferred method of communication listed on the form submission. 
 
+Implementation Example: 
+``` HTML 
+<form action="https://formsubmit.co/kaiba.newsletter@gmail.com" method="POST">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label class="contact-desc">Name</label>
+                                <input class="contact-input" type="text" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label class="contact-desc">Email</label>
+                                <input class="contact-input" type="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <label class="contact-desc">Message</label>
+                        <textarea class="issue-desc" name="desc" rows="10" col="30" placeholder="Describe Your Concerns Here: "></textarea>
+                        <button class="contact-submit" type="submit">Submit</button>
+                    </form>
+```
+The implementation for the Fundraiser and Catering forms follow the same implementation of FormSubmit with difference form input contents. 
+***
+### About Section
+The about section features basic information about the restaurant and includes animated business cards which features the development team of this project. The animation was created through CSS. 
+Implementation: 
+``` css
+.card {
+    position: relative;
+    width: 300px; 
+    height: 350px; 
+    background: #fff; 
+    transform-style: preserve-3d;
+    transform: perspective(1000px); 
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25); 
+    transition: 1s; 
+    margin-right: 35rem; 
+}
+
+.card:hover {
+    transform: translateX(50%); 
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+    transform-origin: left; 
+    transform-style: preserve-3d;
+    background: #000; 
+    transition: 1s; 
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25); 
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-180deg);
+}
+
+.card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card .imgBox img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+```
+***
+### General Animations
+One special animation that our website features is the refresh loading animation. This was created using Javascript and CSS. 
+CSS Implementation: 
+``` css
+.loader-container.fade-out {
+    top: 110%; 
+    opacity: 0; 
+}
+```
+Javascript Implementation: 
+``` javascript
+  function loader() {
+    document.querySelector('.loader-container').classList.add('fade-out'); 
+  }
+  
+  function fadeOut() {
+    setInterval(loader, 3000); 
+  }
+  ```
+***
 ## Citations and Documentation
 Tools/APIs Used (With link to document provided): 
   - Swiper.js: https://swiperjs.com/swiper-api#swiper-full-html-layout 
