@@ -382,6 +382,7 @@ Implementation:
 ***
 ### General Animations
 One special animation that our website features is the refresh loading animation. This was created using Javascript and CSS. 
+
 CSS Implementation: 
 ``` css
 .loader-container.fade-out {
