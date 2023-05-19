@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaliba Japanese Ramen, Sushi & Grill</title>
+        <link rel="icon" href="seahorse png.png">
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!--css link for mainpage-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img class="restaurant-logo" src="seahorse png.png">Kaiba <label id="restaurant-logo2">Japanese Ramen, Sushi & Grill</label></a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="menupage.html">Menu</a>
+                <a href="communitypage.html">Community</a>
+                <a class="active" href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+            </div>
+        </header>
+
+        <form action="" id="search-form">
+            <input type="search" placeholder="Search Here..." name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+
+        <div class="contact-container">
+            <h1 class="contact-title">Connect with Us!</h1>
+            <p class="contact-subtitle">Have Questions or Concerns? Contact Us Here</p>
+            <div class="contact-box">
+                <div class="contact-left">
+                    <h3 class="contact-subject">Send Your Request</h3>
+                    <form action="https://formsubmit.co/kaiba.newsletter@gmail.com" method="POST">
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label class="contact-desc">Name</label>
+                                <input class="contact-input" type="text" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label class="contact-desc">Email</label>
+                                <input class="contact-input" type="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <label class="contact-desc">Message</label>
+                        <textarea class="issue-desc" name="desc" rows="10" col="30" placeholder="Describe Your Concerns Here: "></textarea>
+                        <button class="contact-submit" type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-right">
+                    <h3 class="subject-right">Other Contacts</h3>
+                    <div id="wheel">
+                        <div id="hub">
+                            <img src="seahorse png.png">
+                        </div>
+                        <div id="spoke-wrapper">
+                          <div class="spoke" id="spoke-1">
+                            <svg width="191" height="167" viewBox="0 0 191 167">
+                                <defs>
+                                  <linearGradient
+                                    x1="233.7%"
+                                    y1="382.4%"
+                                    x2="0%"
+                                    y2="50%"
+                                    id="msg_lg"
+                                    gradientUnits="userSpaceOnUse"
+                                  >
+                                    <stop stop-color="#fff" offset="0%"></stop>
+                                    <stop stop-color="#fff" offset="32.4113176%"></stop>
+                                    <stop stop-color="#eee" offset="61.9528277%"></stop>
+                                    <stop stop-color="#eee" offset="100%"></stop>
+                                  </linearGradient>
+                                </defs>
+                                <g fill="url(#msg_lg)">
+                                  <rect x="0" y="0" width="191" height="120" rx="32"></rect>
+                                  <path d="M39 119V167l65-48"></path>
+                                </g>
+                              </svg>
+                          </div>
+                          <div class="spoke" id="spoke-2">
+                            <svg width="200" height="140" viewBox="0 0 200 140">
+                                <defs>
+                                  <linearGradient x1="50%" y1="-57%" x2="50%" y2="100%" id="env_lg">
+                                    <stop stop-color="#1a66ff" offset="0%"></stop>
+                                    <stop stop-color="#1a66ff" offset="100%"></stop>
+                                  </linearGradient>
+                                </defs>
+                                <rect
+                                  id="Rectangle"
+                                  fill="url(#env_lg)"
+                                  x="0"
+                                  y="0"
+                                  width="200"
+                                  height="140"
+                                  rx="8.9"
+                                ></rect>
+                                <path
+                                  opacity="0.5"
+                                  fill="none"
+                                  stroke="#362140"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="16"
+                                  d="M11.1 9.5l88.9 76.7l88.9 -76.7m0 116l-65 -55m-112.8 55l65 -55"
+                                ></path>
+                              </svg>
+                          </div>
+                          <div class="spoke" id="spoke-3">
+                            <a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" target="_blank"><img class="logo-img" src="yelp.png"></a>
+                          </div>
+                          <div class="spoke" id="spoke-4">
+                            <a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" target="_blank"><img class="logo-img" src="ubereats.png"></a></td>
+                          </div>
+                          <div class="spoke" id="spoke-5">
+                            <a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" target="_blank"><img class="logo-img" src="doordash.png"></a></td>
+                          </div>
+                          <div class="spoke" id="spoke-6" role="img" xmlns="http://www.w3.org/2000/svg">
+                            <a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" target="_blank"><img class="logo-img" src="grubhub.png"></a></td>
+                          </div>
+                        </div>
+                      </div>
+                    <!---
+                    <table>
+                        <tr> 
+                            <td><a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" target="_blank"><img class="logo-img" src="grubhub.png"></a></td>
+                            <td><a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" class="links" target="_blank">Grubhub</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" target="_blank"><img class="logo-img" src="doordash.png"></a></td>
+                            <td><a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" class="links" target="_blank">Doordash</a></td>
+                        </tr>
+                        <tr> 
+                            <td><a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" target="_blank"><img class="logo-img" src="ubereats.png"></a></td>
+                            <td><a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" class="links" target="_blank">Uber Eats</a></td>
+                        </tr>
+                        <tr> 
+                            <td><a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" target="_blank"><img class="logo-img" src="yelp.png"></a></td>
+                            <td><a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" class="links" target="_blank">Yelp</a></td>
+                        </tr>
+                    </table>
+                    --->
+                </div>
+            </div>
+        </div>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Locations:</h3>
+                    <a href="#">Anaheim</a>
+                    <a href="#">Monterey</a>
+                    <a href="#">Pasadena</a>
+                </div>
+                <div class="box">
+                    <h3>Community</h3>
+                    <a href="#">Fundraising</a>
+                    <a href="#">Catering</a>
+                    <a href="#">Email Sign Up</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="box">
+                    <h3>Find Us On:</h3>
+                    <a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" target="_blank">Doordash</a>
+                    <a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" target="_blank">Grubhub</a>
+                    <a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" target="_blank">Uber Eats</a>
+                    <a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" target="_blank">Yelp</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 <span>Kaiba Japanese Ramen, Sushi, & Grill. All Rights Reserved. </span>
+            </div>
+        </section>
+        <div class="loader-container">
+            <img src="loader.gif" alt="">
+        </div>
+        <script src="script3.js"></script>
+    </body>
+</html>
