@@ -483,18 +483,36 @@ input[type="submit"] {
 
 .about-us {
     text-align: center;
-    font-size: 28px;
+    font-size: 24px;
+}
+
+.about-wrapper {
+    width: 100%; 
+    height: 500px; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px; 
+    justify-content: center;
+    align-items: center; 
+    margin-top: 5rem; 
+    margin-bottom: 10rem;  
+}
+
+.about-heading {
+    width: 100%; 
+    border-top: 0.5rem solid rgb(202, 0, 0);
+    margin-top: 5rem; 
 }
 
 .about-container {
     width: 100%; 
-    margin: 25px 0; 
+    margin: 1.5rem 0; 
 }
 
 .locations {
     padding: 2rem 0; 
-    width: 100%;
-    height: 100%; 
+    width: 500px;
+    height: 500px; 
     object-fit: contain;
     display: flex; 
     justify-content: center;
@@ -503,6 +521,8 @@ input[type="submit"] {
 
 .locations img {
     border-radius: 1.5rem; 
+    width: 500px; 
+    height: 500px; 
 }
 
 .copyright-container {
@@ -1230,15 +1250,15 @@ input[type="submit"] {
 }
 
 .contact-left {
-    flex-basis: 60%; 
+    flex-basis: 55%; 
     padding: 40px 60px; 
     border: 1px solid black;
     border-radius: 0.5rem; 
 }
 
 .contact-right {
-    flex-basis: 40%; 
-    padding: 40px; 
+    flex-basis: 45%; 
+    padding: 30px; 
     background-color:rgb(202, 0, 0);
     color: white; 
 }
@@ -1313,7 +1333,7 @@ input[type="submit"] {
 
 .subject-right {
     font-weight: 600;
-    margin-bottom: 30px; 
+    margin-bottom: 10px; 
     font-size: 20px; 
 }
 
@@ -1332,6 +1352,283 @@ input[type="submit"] {
     color:navy;
     text-decoration: underline;
 }
+
+#wheel {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    transform: translate(50px, 0);
+  }
+  
+  /* Hub styles */
+  #hub {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px); 
+  
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+  
+    position: relative;
+    z-index: 1;
+  }
+  
+  #hub img {
+    object-fit: contain;
+    width: 150px; 
+    height: 150px; 
+  }
+
+  /* Spoke styles */
+  #spoke-wrapper {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  
+    animation: spin-wheel 14s ease-in-out infinite;
+  }
+  
+  .spoke {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  
+    display: grid;
+    place-items: center;
+  
+    animation: spin-spokes 14s ease-in-out infinite,
+      scaler 14s ease-in-out infinite;
+  }
+  
+  .spoke img {
+    width: 130px; 
+    height: 130px; 
+  }
+
+  .spoke svg {
+    width: 90px;
+  }
+  
+  /* 
+  --- TO POSITION STUFF AROUND A CENTER POINT ---
+      x = r * cos(angle)
+      y = r * sin(angle)
+  */
+  
+  #spoke-1 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+  
+    margin-left: 150px;
+    margin-top: 0px;
+  
+    animation-delay: 0s, calc(-2.333333s * 5);
+  }
+  
+  #spoke-2 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: 75px;
+    margin-top: 129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 0);
+  }
+  
+  #spoke-3 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -75px;
+    margin-top: 129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 1);
+  }
+  
+  #spoke-4 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -150px;
+    margin-top: 0px;
+  
+    animation-delay: 0s, calc(-2.333333s * 2);
+  }
+  
+  #spoke-5 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -75px;
+    margin-top: -129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 3);
+  }
+  
+  #spoke-5 img {
+    object-fit: contain; 
+  }
+
+  #spoke-6 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    
+
+    margin-left: 75px;
+    margin-top: -129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 4);
+  }
+  
+  /* animations */
+  @keyframes spin-wheel {
+    0% {
+      transform: rotate(0);
+    }
+    5% {
+      transform: rotate(0);
+    }
+  
+    16.67% {
+      transform: rotate(60deg);
+    }
+    21.67% {
+      transform: rotate(60deg);
+    }
+  
+    33.33% {
+      transform: rotate(120deg);
+    }
+    38.33% {
+      transform: rotate(120deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+    55% {
+      transform: rotate(180deg);
+    }
+  
+    66.67% {
+      transform: rotate(240deg);
+    }
+    71.67% {
+      transform: rotate(240deg);
+    }
+  
+    83.33% {
+      transform: rotate(300deg);
+    }
+    88.33% {
+      transform: rotate(300deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin-spokes {
+    0% {
+      transform: rotate(0);
+    }
+    5% {
+      transform: rotate(0);
+    }
+  
+    16.67% {
+      transform: rotate(-60deg);
+    }
+    21.67% {
+      transform: rotate(-60deg);
+    }
+  
+    33.33% {
+      transform: rotate(-120deg);
+    }
+    38.33% {
+      transform: rotate(-120deg);
+    }
+  
+    50% {
+      transform: rotate(-180deg);
+    }
+    55% {
+      transform: rotate(-180deg);
+    }
+  
+    66.67% {
+      transform: rotate(-240deg);
+    }
+    71.67% {
+      transform: rotate(-240deg);
+    }
+  
+    83.33% {
+      transform: rotate(-300deg);
+    }
+    88.33% {
+      transform: rotate(-300deg);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes scaler {
+    0% {
+      scale: 1.15;
+    }
+    5% {
+      scale: 1.15;
+    }
+  
+    16.67% {
+      scale: 0.85;
+    }
+    21.67% {
+      scale: 0.85;
+    }
+  
+    33.33% {
+      scale: 0.75;
+    }
+    38.33% {
+      scale: 0.75;
+    }
+  
+    50% {
+      scale: 0.675;
+    }
+    55% {
+      scale: 0.675;
+    }
+  
+    66.67% {
+      scale: 0.75;
+    }
+    71.67% {
+      scale: 0.75;
+    }
+  
+    83.33% {
+      scale: 0.85;
+    }
+    88.33% {
+      scale: 0.85;
+    }
+  
+    100% {
+      scale: 1.15;
+    }
+  }
 
 tr td:first-child {
     padding-right: 20px; 
