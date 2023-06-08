@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaliba Japanese Ramen, Sushi & Grill</title>
+        <link rel="icon" href="seahorse png.png">
+        <!--font awesome cdn link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!--css link for mainpage-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img class="restaurant-logo" src="seahorse png.png">Kaiba <label id="restaurant-logo2">Japanese Ramen, Sushi & Grill</label></a>
+            <div class="cart-nav cart-container">
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a class="active" href="menupage.html">Menu</a>
+                <a href="communitypage.html">Community</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i>
+                <a href="#" class="fas fa-heart"></a>
+                <a class="fas fa-shopping-cart" id="cart-icon"></a>
+            </div>
+
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <div class="cart-content">
+            
+                    </div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <form class="checkout-info" method="POST">
+                        <div class="checkout-box">
+                        <label class="checkout-desc">Name: </label>
+                        <input class="checkout-input" type="text" name="name" placeholder="Name" required>
+                        <label class="checkout-desc">Email: </label>
+                        <input class="checkout-input" id="email" type="email" name="email" placeholder="Email" required>
+                        <label class="checkout-desc">Phone Number: </label>
+                        <input class="checkout-input" id="tel-num" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number" required>
+                        <label class="checkout-desc">Address: </label>
+                        <input class="checkout-input" type="text" name="address" placeholder="Address" required>
+                        <label class="checkout-desc">Card Number: </label>
+                        <input class="checkout-input" id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        <label class="checkout-desc">Expiration Date: </label>
+                        <input class="checkout-input" id="expiration-date" type="type" name="date" placeholder="MM/YY" required>
+                        <label class="checkout-desc">CVV: </label>
+                        <input class="checkout-input" id="cvv" type="type" name="cvv" placeholder="CVV" required>
+                        </div>
+                    </form>
+                    <div class="error-message">
+                        <p>Please Enter All The Details Correctly</p>
+                    </div>
+                    <button type="button" class="btn-buy">Order Now!</button>
+                    <i class="fas fa-times" id="close-cart"></i>
+                </div>
+            </div>
+        </header>
+
+        <form action="" id="search-form">
+            <input type="search" placeholder="Search Here..." name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        <section class="dishes" id="dishes">
+            <h3 class="sub-heading">A Preview Of Our Dishes</h3>
+            <div class="full-menu">
+                <a href="KAIBA_ANA_PDF_210204.pdf" class="btn" id="menu-btn" target="_blank">View Full Menu</a>
+            </div>
+            <h1 class="heading">Appetizers</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="GREEN ONION SESAME CHICKEN.jpg" alt="Green Onion Sesame Chicken">
+                    <h3 class="name">Green Onion Sesame Chicken</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$8.99</span>
+                    <a class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="IKA-GESO.jpg" alt="Ika Geso">
+                    <h3 class="name">Ika Geso</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$10.99</span>
+                    <a class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="SPICY TUNA ON CRISPY RICE.jpg" alt="Spicy Tuna on Crispy Rice">
+                    <h3 class="name">Spicy Tuna on Crispy Rice</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$9.99</span>
+                    <a class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Basic Rolls</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="TUNA ROLL 210703 03.jpg" alt="Tuna Roll">
+                    <h3 class="name">Tuna Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$6.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="SALMON ROLL 210703 01.jpg" alt="Salmon Roll">
+                    <h3 class="name">Salmon Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$6.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="CALIFORNIA ROLL 02.jpg" alt="California Roll">
+                    <h3 class="name">California Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$6.50</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Carpaccio</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="CAPACCIO-ALBACORE-001-PNG.jpg" alt="Albacore Carpaccio">
+                    <h3 class="name">Albacore Carpaccio</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$12.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="CAPACCIO-TUNA-005.jpg" alt="Bluefin Tuna Carpaccio">
+                    <h3 class="name">Bluefin Tuna Carpaccio</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="CAPACCIO-YELLOWTAIL-001.jpg" alt="Yellowtail Carpaccio">
+                    <h3 class="name">Yellowtail Carpaccio</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Sashimi Combo</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="COMBO SASHIMI LARGE 106.jpg" alt="Sashimi Combo (Small)">
+                    <h3 class="name">Sashimi Combo (Small)</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$39.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="COMBO SASHIMI LARGE 106.jpg" alt="Sashimi Combo (Large)">
+                    <h3 class="name">Sashimi Combo (Large)</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$52.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Poke Bowls</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="POKE TUNA BOWL.jpg" alt="Poke Tuna Bowl">
+                    <h3 class="name">Poke Tuna Bowl</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="POKE SALMON BOWL.jpg" alt="Poke Salmon Bowl">
+                    <h3 class="name">Poke Salmon Bowl</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="POKE ALBACORE 01.jpg" alt="Poke Albacore Bowl">
+                    <h3 class="name">Poke Albacore Bowl</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Sushi Burritos</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="SUPER BRITO.jpg" alt="Tuna Burrito">
+                    <h3 class="name">Tuna Burrito</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$8.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="salmon-burrito-210611-2.jpg" alt="Salmon Burrito">
+                    <h3 class="name">Salmon Burrito</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$8.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="Sushi-Buritto.jpg" alt="Albacore Burrito">
+                    <h3 class="name">Albacore Burrito</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$8.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Special Rolls</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="tiger-1 PNG.jpg" alt="Tiger Roll">
+                    <h3 class="name">Tiger Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="KAIBA 02.jpg" alt="Kaiba Roll">
+                    <h3 class="name">Kaiba Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="ENERGY ROLL 01.jpg" alt="Energy Roll">
+                    <h3 class="name">Energy Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$15.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="VEGAS 220301 LARGE 04.jpg" alt="Vegas Roll">
+                    <h3 class="name">Vegas Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$12.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="FIRE.jpg" alt="Fire Roll">
+                    <h3 class="name">Fire Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="DRAGON 210702 01.jpg" alt="Dragon Roll">
+                    <h3 class="name">Dragon Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="DYNAMITE 01 small.jpg" alt="Dynamite Roll">
+                    <h3 class="name">Dynamite Roll</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$12.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Entrée (Served with Miso Soup and Rice)</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="CHICHEN TERIYAKI DARK  capture jpg.jpg" alt="Chicken Teriyaki">
+                    <h3 class="name">Chicken Teriyaki on a Hot Sizzling Plate</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="BEEF TERIYAKI 01.jpg" alt="Beef Teriyaki">
+                    <h3 class="name">Beef Teriyaki on a Hot Sizzling Plate</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$14.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+            <h1 class="heading">Noodles</h1>
+            <div class="box-container">
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="TONKOSU-RAMEN-190603.jpg" alt="Chicken Teriyaki">
+                    <h3 class="name">Tonkatsu Ramen</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img class="appetizers" src="SPICY-MISO-RAMEN-190603.jpg" alt="Beef Teriyaki">
+                    <h3 class="name">Spicy Miso Ramen</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price">$13.99</span>
+                    <a href="#" class="btn add-cart">Order</a>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <h3>Locations:</h3>
+                    <a href="#">Anaheim</a>
+                    <a href="#">Monterey</a>
+                    <a href="#">Pasadena</a>
+                </div>
+                <div class="box">
+                    <h3>Community</h3>
+                    <a href="communitypage.html">Fundraising</a>
+                    <a href="communitypage.html">Catering</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About Us</a>
+                </div>
+                <div class="box">
+                    <h3>Find Us On:</h3>
+                    <a href="https://www.doordash.com/store/kaiba-japanese-restaurant-anaheim-587415/?event_type=autocomplete&pickup=false" target="_blank">Doordash</a>
+                    <a href="https://www.grubhub.com/restaurant/kaiba-japanese-restaurant---anaheim-820-n-euclid-st-anaheim/1240792" target="_blank">Grubhub</a>
+                    <a href="https://www.ubereats.com/store/kaiba-japanese-ramen-sushi-%26-grill-n-euclid-st/gx0yNVCMSpKTB260HpqrHg" target="_blank">Uber Eats</a>
+                    <a href="https://www.yelp.com/biz/kaiba-japanese-ramen-sushi-and-grill-anaheim-2" target="_blank">Yelp</a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 <span>Kaiba Japanese Ramen, Sushi, & Grill. All Rights Reserved. </span>
+            </div>
+        </section>
+        <div class="loader-container">
+            <img src="loader.gif" alt="">
+        </div>
+        <script src="script2.js"></script>
+    </body>
+</html>
