@@ -304,6 +304,55 @@ function updateTotal() {
 
 }
 ```
+Input Validations
+``` javascript
+cardNumber.addEventListener("input", (e) => {
+  let cardValue = e.target.value; 
+  if(isNaN(cardValue)) {
+    cardNumber.classList.add("invalid"); 
+  } else {
+    cardNumber.classList.remove("invalid"); 
+  }
+})
+
+cvvNumber.addEventListener("input", (e) => {
+  let cvvValue = e.target.value; 
+  if(isNaN(cvvValue)) { 
+    cvvNumber.classList.add("invalid");
+  } else {
+    cvvNumber.classList.remove("invalid"); 
+  }
+})
+
+emailInput.addEventListener("input", (e) => {
+  let emailValue = e.target.value; 
+  if(!emailValue.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailInput.classList.add("invalid");
+  } else {
+    emailInput.classList.remove("invalid"); 
+  }
+})
+
+let regex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+
+phoneNumber.addEventListener("input", (e) => {
+  let phoneValue = e.target.value;
+  if (!phoneValue.match(regex) || isNaN(phoneValue)) {
+    phoneNumber.classList.add("invalid"); 
+  } else {
+    phoneNumber.classList.remove("invalid"); 
+  }
+})
+
+expirationDate.addEventListener("input", (e) => {
+  let dateValue = e.target.value; 
+  if(dateValue.indexOf("/") != 2 && isNaN(dateValue)) {
+    expirationDate.classList.add("invalid");
+  } else {
+    expirationDate.classList.remove("invalid"); 
+  }
+})
+```
 ***
 ### Fundraiser, Catering, and Contact Forms (Community Page and Contact Page)
 This section allows the users to request for fundraising, catering, or general inquiries through the use of a submission form. The submitted information is then transferred to our email through the FormSubmit backend tool. Following this, our admins can then review the submitted information and communicate with the customers through their preferred method of communication listed on the form submission. 
@@ -400,6 +449,286 @@ Javascript Implementation:
     setInterval(loader, 3000); 
   }
   ```
+The website also features a rotating circular hub. 
+This implementation is credited to @tomisloading on Tik Tok
+``` css
+#wheel {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    transform: translate(50px, 0);
+  }
+  
+  /* Hub styles */
+  #hub {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+  
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px); 
+  
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+  
+    position: relative;
+    z-index: 1;
+  }
+  
+  #hub img {
+    object-fit: contain;
+    width: 150px; 
+    height: 150px; 
+  }
+
+  /* Spoke styles */
+  #spoke-wrapper {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  
+    animation: spin-wheel 14s ease-in-out infinite;
+  }
+  
+  .spoke {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  
+    display: grid;
+    place-items: center;
+  
+    animation: spin-spokes 14s ease-in-out infinite,
+      scaler 14s ease-in-out infinite;
+  }
+  
+  .spoke img {
+    width: 130px; 
+    height: 130px; 
+  }
+
+  .spoke svg {
+    width: 90px;
+  }
+  
+  /* 
+  --- TO POSITION STUFF AROUND A CENTER POINT ---
+      x = r * cos(angle)
+      y = r * sin(angle)
+  */
+  
+  #spoke-1 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+  
+    margin-left: 150px;
+    margin-top: 0px;
+  
+    animation-delay: 0s, calc(-2.333333s * 5);
+  }
+  
+  #spoke-2 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: 75px;
+    margin-top: 129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 0);
+  }
+  
+  #spoke-3 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -75px;
+    margin-top: 129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 1);
+  }
+  
+  #spoke-4 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -150px;
+    margin-top: 0px;
+  
+    animation-delay: 0s, calc(-2.333333s * 2);
+  }
+  
+  #spoke-5 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    margin-left: -75px;
+    margin-top: -129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 3);
+  }
+  
+  #spoke-5 img {
+    object-fit: contain; 
+  }
+
+  #spoke-6 {
+    background-image: linear-gradient(-44deg, rgba(244, 230, 230, 0.6) 2%, rgba(255, 255, 255, 0.6));
+    
+
+    margin-left: 75px;
+    margin-top: -129px;
+  
+    animation-delay: 0s, calc(-2.333333s * 4);
+  }
+  
+  /* animations */
+  @keyframes spin-wheel {
+    0% {
+      transform: rotate(0);
+    }
+    5% {
+      transform: rotate(0);
+    }
+  
+    16.67% {
+      transform: rotate(60deg);
+    }
+    21.67% {
+      transform: rotate(60deg);
+    }
+  
+    33.33% {
+      transform: rotate(120deg);
+    }
+    38.33% {
+      transform: rotate(120deg);
+    }
+  
+    50% {
+      transform: rotate(180deg);
+    }
+    55% {
+      transform: rotate(180deg);
+    }
+  
+    66.67% {
+      transform: rotate(240deg);
+    }
+    71.67% {
+      transform: rotate(240deg);
+    }
+  
+    83.33% {
+      transform: rotate(300deg);
+    }
+    88.33% {
+      transform: rotate(300deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin-spokes {
+    0% {
+      transform: rotate(0);
+    }
+    5% {
+      transform: rotate(0);
+    }
+  
+    16.67% {
+      transform: rotate(-60deg);
+    }
+    21.67% {
+      transform: rotate(-60deg);
+    }
+  
+    33.33% {
+      transform: rotate(-120deg);
+    }
+    38.33% {
+      transform: rotate(-120deg);
+    }
+  
+    50% {
+      transform: rotate(-180deg);
+    }
+    55% {
+      transform: rotate(-180deg);
+    }
+  
+    66.67% {
+      transform: rotate(-240deg);
+    }
+    71.67% {
+      transform: rotate(-240deg);
+    }
+  
+    83.33% {
+      transform: rotate(-300deg);
+    }
+    88.33% {
+      transform: rotate(-300deg);
+    }
+  
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes scaler {
+    0% {
+      scale: 1.15;
+    }
+    5% {
+      scale: 1.15;
+    }
+  
+    16.67% {
+      scale: 0.85;
+    }
+    21.67% {
+      scale: 0.85;
+    }
+  
+    33.33% {
+      scale: 0.75;
+    }
+    38.33% {
+      scale: 0.75;
+    }
+  
+    50% {
+      scale: 0.675;
+    }
+    55% {
+      scale: 0.675;
+    }
+  
+    66.67% {
+      scale: 0.75;
+    }
+    71.67% {
+      scale: 0.75;
+    }
+  
+    83.33% {
+      scale: 0.85;
+    }
+    88.33% {
+      scale: 0.85;
+    }
+  
+    100% {
+      scale: 1.15;
+    }
+  }
+```
 ***
 ## Citations and Documentation
 Tools/APIs Used (With link to document provided): 
